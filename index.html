@@ -3,44 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kevin Silva's personal website with information about hobbies, goals, and favorite music.">
     <title>Kevin's Website</title>
     <style>
-        body {
-            background-color: #474444; /* Grey color code */
-            color: #000000; /* Text color for better visibility on a dark background */
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
+       body {
+    background-color: #474444; /* Grey color code */
+    color: #ffffff; /* White text for better visibility on a dark background */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+header {
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+audio {
+   
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    color: #999999;
+}
+
     </style>
 </head>
 <body>
-    <h1>My fourth website</h1>
-    <h2>Kevin Silva</h2>
-    <h6>Sojourn from Overwatch</h6>
-    <img src="images/sojourn.jpg" alt="profile picture of one of my main characters on the game I play the most">
-    <p>My name is Kevin Silva, I'm a 26-year-old Angolan that's been living in Porto, Portugal for over 6 years. My hobbies are:</p>
+    <header>
+        <h1>My fourth website</h1>
+        <h2>Kevin Silva</h2>
+        <h6>Sojourn, my best and favoite character from the game i play the most.</h6>
+    </header>
 
-    <ul>
-        <li><a href="#gaming">Gaming</a></li>
-        <li><a href="#reading">Reading</a></li>
-        <li><a href="#working-out">Working out</a></li>
-    </ul>
+    <section id="About">
+        <img src="/images/sojourn.jpg" alt="profile picture of one of my main characters on the game I play the most">
+        <p>My name is Kevin Silva, I'm a 26-year-old Angolan that's been living in Porto, Portugal for over 6 years.</p>
+    </section>
 
-    <p>I have lots of goals to accomplish, and one of them is to accumulate lots of experience with this degree so I can live a stable and quiet life.</p>
-    
-    <a href="/Audio/11. Assassin's Creed.mp3" download>
-        <audio controls >
+    <section id="Hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+            <li><a href="#gaming">Gaming</a></li>
+            <li><a href="#reading">Reading</a></li>
+            <li><a href="#working-out">Working out</a></li>
+        </ul>
+    </section>
+
+    <section id="Goals">
+        <h3>Goals</h3>
+        <p>I have lots of goals to accomplish, and one of them is to accumulate lots of experience with this degree so I can live a stable and quiet life.</p>
+    </section>
+
+    <section id="Music">
+        <h3>Favorite Song</h3>
+        <p>This is one of the songs that i've been listening the most to</p>
+        <audio controls autoplay>
             <source src="/Audio/11. Assassin's Creed.mp3" type="audio/mp3">
         </audio>
-        <p>DOWNLOD</p>
-    </a>
-
-    <p>This is one of the songs I've been listening to the most.</p>
+        <a href="/Audio/11. Assassin's Creed.mp3" download><p>Download</p</a>
+    </section>
 </body>
+
 </html>
