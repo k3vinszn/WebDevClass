@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>light:3</title>
+<style>
+    body {
+        transition: background-color 1s ease;
+        background-color: #2c3e50; /* Change background color to a shade of blue */
+        font-family: Georgia;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        height: 100vh;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        text-transform: lowercase;
+        margin-top: 10px;
+    }
+    button.light {
+        background-color: #3498db; /* Change light button background color to a shade of blue */
+        color: white;
+    }
+    button.dark {
+        background-color: #ecf0f1; /* Change dark button background color to a lighter shade of blue */
+        color: black;
+    }
+    button.light:hover {
+        background-color: #5DADE2; /* Change light button hover color to a shade of blue */
+    }
+    button.dark:hover {
+        background-color: #D5DBDB; /* Change dark button hover color to a lighter shade of blue */
+    }
+    #lightOffImg,
+    #lightOnImg {
+        max-width: 500px;
+        height: auto;
+        display: none;
+        margin-bottom: 10px;
+    }
+    #lightOffImg.active,
+    #lightOnImg.active {
+        display: inline;
+    }
+</style>
+</head>
+<body>
+    <img src="lampoff.png" alt="Light Off" id="lightOffImg">
+    <img src="lamp on.png" alt="Light On" id="lightOnImg" class="active">
+    
+    <button id="toggleButton" class="light">turn off</button>
+
+    <script>
+        var button = document.getElementById('toggleButton');
+        var lightOffImg = document.getElementById('lightOffImg');
+        var lightOnImg = document.getElementById('lightOnImg');
+
+        button.addEventListener('click', function() {
+            var currentColor = window.getComputedStyle(document.body).backgroundColor;
+
+            if (currentColor === 'rgb(236, 240, 241)') { // Change to match the new background color
+                document.body.style.backgroundColor = '#17202A'; // Change to a darker shade of blue
+                button.textContent = 'turn on';
+                button.classList.remove('light');
+                button.classList.add('dark');
+                lightOffImg.classList.add('active');
+                lightOnImg.classList.remove('active');
+            } else {
+                document.body.style.backgroundColor = '#ecf0f1'; // Change back to the original light blue color
+                button.textContent = 'turn off';
+                button.classList.remove('dark');
+                button.classList.add('light');
+                lightOffImg.classList.remove('active');
+                lightOnImg.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
